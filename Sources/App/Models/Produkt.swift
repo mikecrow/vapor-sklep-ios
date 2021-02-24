@@ -19,16 +19,17 @@ final class Produkt: Model, Content {
     @Field(key: "quantity")
     var quantity: Int
 
-    @Parent(key: "kategoria_id")
-    var kategoria_id: Kategoria
+    @Field(key: "kategoria_id")
+    var kategoria_id: String
     
     init() { }
 
-    init(id: UUID? = nil, title: String, description: String, image: String, quantity: Int) {
+    init(id: UUID? = nil, title: String, description: String, image: String, quantity: Int, kategoria_id: String) {
         self.id = id
         self.title = title
         self.description = description
         self.image = image
         self.quantity = quantity
+        self.kategoria_id = kategoria_id
     }
 }

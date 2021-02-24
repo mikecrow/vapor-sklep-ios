@@ -8,8 +8,7 @@ struct CreateProdukt: Migration {
             .field("description", .string, .required)
             .field("image", .string, .required)
             .field("quantity", .int, .required)
-            .field("kategoria_id", .uuid, .required)
-            .foreignKey("kategoria_id", references: Kategoria.schema, .id, onDelete: .cascade, onUpdate: .noAction)
+            .field("kategoria_id", .string, .required)
             .create()
     }
 
